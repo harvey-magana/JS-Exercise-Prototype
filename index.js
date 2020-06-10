@@ -47,23 +47,21 @@ function Person(name, age, stomach = []) {
 }
 
 Person.prototype.eat = function(food) {
-  for(let i =0; i < 10; i++) {
-    if(this.stomach[10]) {
-      continue; 
-    } else {
-      this.stomach.push(food);
-    }
-  };
+  if(this.stomach.length < 10) {
+    return this.stomach.push(food)
+  } else {
+    return null;
+  }
 }
 
 Person.prototype.poop = function() {
-  for(let i =0; i < 10; i++) {
-    if(!this.isFull) {
-      this.stomach.shift(food);
-    } else {
-      continue;
-    }
-  };
+  return this.stomach = []
+  /*
+  if(this.stomach.length > 10) {
+    return this.stomach = []
+  } else {
+    return null
+  }*/
 };
 
 Person.prototype.toString = function(name, age) {
