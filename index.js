@@ -110,21 +110,26 @@ Car.prototype.drive = function(distance) {
 function Baby(name, age, favoriteToy) {
   Person.call(this, name, age)
   this.favoriteToy = favoriteToy;
+  this.name = name;
+  this.age = age;
 }
+
+Baby.prototype = Object.create(Person.prototype);
 
 Baby.prototype.play = function() {
   return `Playing with ${this.favoriteToy}.`
 }
 
-const hughy = new Baby("Hughy", 3, "train")
-hughy.eat.apply();
+
+
+
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
+  1. The "this" keyword is a placeholder that addresses the context inside the scope of an object
+  2. it us used as a reference of the value being passed in
   3. 
   4. 
 */
