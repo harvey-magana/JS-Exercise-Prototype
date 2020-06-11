@@ -128,10 +128,10 @@ Baby.prototype.play = function() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. The "this" keyword is a placeholder that addresses the context inside the scope of an object
-  2. it us used as a reference of the value being passed in
-  3. 
-  4. 
+  1. When you are not in the scope of a function or an object, use of 'this' will show the global scope
+  2. When 'this' is prepended on a function, it is being used an an object that identifies the object that the variable is set to. 
+  3. When used from the creation of an object using the 'new' keyword, it is identifying its reference to the object it was created from. 
+  4. When used from the .call or .apply methods, 'this' is referencing the super class that it was created from. 
 */
 
 
